@@ -3,12 +3,12 @@ package Assignment1;
 public class ReferResult {
 	private int index;// frame
 	private int page;
-	private int replacePage;
+	private int replacedPage;
 
-	public ReferResult(int index, int page, int replacePage) {
+	public ReferResult(int index, int page, int replacedPage) {
 		this.index = index;
 		this.page = page;
-		this.replacePage = replacePage;
+		this.replacedPage = replacedPage;
 	}
 
 	public int getIndex() {
@@ -19,8 +19,8 @@ public class ReferResult {
 		return page;
 	}
 
-	public int getReplacePage() {
-		return replacePage;
+	public int getReplacedPage() {
+		return replacedPage;
 	}
 
 }

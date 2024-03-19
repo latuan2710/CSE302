@@ -16,7 +16,7 @@ public class FIFOPageReplacement implements PageReplacementStrategy {
 		for (int i : references) {
 			ReferResult referResult = pageReplacement.refer(i);
 
-			if (referResult.getPage() != referResult.getReplacePage()) {
+			if (referResult.getPage() != referResult.getReplacedPage()) {
 				List<PageInfo> quene = pageReplacement.getQuene();
 				System.out.println(quene);
 				pageFaultCount++;
@@ -61,31 +61,4 @@ public class FIFOPageReplacement implements PageReplacementStrategy {
 		return result;
 	}
 
-}
-
-class PageInfo {
-	private int index;
-	private int Page;
-
-	public PageInfo(int index, int page) {
-		this.index = index;
-		Page = page;
-	}
-
-	public int getIndex() {
-		return index;
-	}
-
-	public int getPage() {
-		return Page;
-	}
-
-	public void setPage(int page) {
-		Page = page;
-	}
-
-	@Override
-	public String toString() {
-		return "(" + index + " , " + Page + ")";
-	}
 }
